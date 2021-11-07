@@ -11,8 +11,7 @@ def num_translate(num: str):
                    'ten': 'десять'}
     if num in translation:
         return translation[num]
-    else:
-        return None
+    return None
 
 
 print(num_translate('eight'))
