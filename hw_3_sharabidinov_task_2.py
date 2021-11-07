@@ -8,19 +8,11 @@ def num_translate(num: str):
                    'seven': 'семь',
                    'eight': 'восемь',
                    'nine': 'девять',
-                   'ten': 'десять',
-                   'One': 'Один',
-                   'Two': 'Два',
-                   'Three': 'Три',
-                   'Four': 'Четыре',
-                   'Five': 'Пять',
-                   'Six': 'Шесть',
-                   'Seven': 'Семь',
-                   'Eight': 'Восемь',
-                   'Nine': 'Девять',
-                   'Ten': 'Десять'
-                   }
-    if num in translation:
+                   'ten': 'десять'}
+    
+    if num.istitle():
+        return (translation.get(num.lower())).title()
+    elif num in translation:
         return translation[num]
     return None
 
